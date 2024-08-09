@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://MisTPEBUS.github.io/05--Week5HW",
+  "homepage": "https://mistpebus.github.io/05--Week5HW/",
   "scripts": {
     "start": "vite",
     "build": "vite build",
