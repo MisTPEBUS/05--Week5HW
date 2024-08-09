@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + JS + tailwindcss v3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+
+  <body class="text-center selection:bg-green-900">
+    <header
+      class="flex min-h-screen flex-col items-center justify-center bg-[#282c34] text-white"
+    >
+      <%- include('./src/components/logo.ejs') %>
+      <p
+        class="bg-gradient-to-r from-emerald-300 to-sky-300 bg-clip-text pb-5 text-5xl font-black text-transparent selection:bg-transparent"
+      >
+        a Tag 教學
+      </p>
+      <p class="pb-6 text-red-500">
+        請使用 &lt;%= base %&gt; 作為 a 連接，它會根據環境不同而有所不同。
+      </p>
+      <p class="pb-6 text-red-500">
+        不清楚請看Code，這個範例就是使用 &lt;%= base %&gt;
+      </p>
+      <p class="pb-6 text-red-500">引入文件請不要使用 &lt;%= base %&gt;</p>
+      <p class="mt-3 flex gap-3 text-center text-[#8d96a7]">
+        <a
+          class="text-[#61dafb] transition-all hover:text-blue-400"
+          href="<%= base %>index.html"
+          rel="noopener noreferrer"
+        >
+          返回首頁
+        </a>
+        <a
+          class="text-[#61dafb] transition-all hover:text-blue-400"
+          href="https://vitejs.dev/guide/features.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Vite Docs
+        </a>
+      </p>
+    </header>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
