@@ -142,11 +142,17 @@ import MyComponent from '@/components/MyComponent';
             info.html           # 資訊頁 HTML 檔案
 ```
 
-## 作者
+## 初始環境版本作者
 
 👤 **兔子**
 
 - Github: [@ttppoo121440](https://github.com/ttppoo121440)
+
+## 作者
+
+👤 **Lobinda**
+
+- Github: [@Lobinda](https://github.com/MisTPEBUS)
 
 ```
 
