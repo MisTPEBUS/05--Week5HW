@@ -11,7 +11,19 @@ module.exports = {
   plugins: [],
   theme: {
     fontFamily: {
+      lato: ['Lato', 'sans-serif'],
       sans: ["Roboto", "Noto Sans TC", "sans-serif"],
+    },
+    fontSize: {
+      '12p': '12px',
+      '14p': '14px',
+      '16p': '16px',
+      '24p': '24px',
+    },
+    extend: {
+      fontSize: {
+        base: ['16px', '1.5'],
+      },
     },
     container: {
       center: true, // 将容器居中
@@ -32,12 +44,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        "light-bg": "#F8F9FA",
         primary: "#198754",
         secondary: "#6C757D",
         text: "#212529",
-        danger: "#DC3545",
-        "border-line": "#CED4DA",
+        "border": "#CED4DA",
+        "light-bg": "#F8F9FA",
       },
     },
   },

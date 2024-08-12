@@ -7,4 +7,7 @@
     @apply mx-auto;
     max-width: 924px;
   }
+  .nav-item {
+    @apply flex pb-4 pl-8 text-16p font-bold duration-300 hover:bg-gray-400;
+  }
 }
