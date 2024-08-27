@@ -47,7 +47,7 @@ module.exports = {
         primary: "#198754",
         secondary: "#6C757D",
         text: "#212529",
-
+        danger: "#DC3545",
       },
       textDecoration: {
         revert: 'revert',

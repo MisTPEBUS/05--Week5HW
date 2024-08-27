@@ -16,4 +16,14 @@
   .pagination-active {
     @apply bg-primary text-white;
   }
+  /* 隐藏滚动条的样式 */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* 隐藏滚动条但仍然可以滚动 */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* 适用于 Internet Explorer 和 Edge */
+    scrollbar-width: none; /* 适用于 Firefox */
+  }
 }

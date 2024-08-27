@@ -1,4 +1,4 @@
-<div class="fixed z-10 overflow-y-auto top-0 w-full left-0 hidden" id="modal_view">
+<div class="fixed z-10 overflow-y-auto top-0 w-full left-0 hidden shadow-lg" id="modal_new">
     <div class="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <div class="fixed inset-0 transition-opacity">
             <div class="absolute inset-0 bg-gray-900 opacity-50"></div>
@@ -8,34 +8,88 @@
         <div class="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
             role="dialog" aria-modal="true" aria-labelledby="modal-headline">
 
-            <a href="#"
-                class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-                    src="../assets/images/emir.jpeg" alt="">
-                <div class="flex flex-col justify-between p-4 leading-normal">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy
-                        technology
-                        acquisitions 2021</h5>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
-                        technology
-                        acquisitions of 2021 so far, in reverse chronological order.</p>
+            <div class="no-scrollbar relative mx-auto max-h-[68vh] w-[480px] overflow-y-auto rounded-lg bg-white ">
+                <div class="sticky top-0  bg-white font-lato border-b">
+                    <div class="flex p-8">
+                        <h2 class="text-24p font-bold">New Admin</h2>
+                        <button onclick="toggleModalNew()" class="close ml-auto text-gray-400 hover:text-gray-600">
+                            <i class="material-icons  ">close</i>
+                        </button>
+                    </div>
                 </div>
-            </a>
+                <div class="pb-4 pl-8 pr-8 ">
+                    <h3 class="pb-4 text-20p font-bold">Account</h3>
+                    <div class="pb-4">
+                        <label for="name" class="text-14p font-normal">Name</label>
+                        <input type="text" id="name" class="h-[51px] w-full border border-black p-4" />
+                    </div>
+                    <div class="border-b pb-5">
+                        <label for="Email" class="text-14p font-normal">Email</label>
+                        <input type="email" id="Email" class="h-[51px] w-full border border-black p-4" />
+                    </div>
+                    <h3 class="pb-5 pt-5 text-20p font-bold">Verification</h3>
+                    <div class="flex pb-4">
+                        <span class="material-icons pr-2 text-danger"> warning </span>
+                        <p class="font-bold">Unverified</p>
+                    </div>
+                    <div class="border-b pb-5">
+                        <a href="#"
+                            class="flex h-[51px] font-bold items-center justify-center border border-border-line text-primary">
+                            Send Verification Mail</a>
+                    </div>
+                    <h3 class="pb-4 pt-5 text-20p font-bold">Access Level</h3>
+                    <div class="border-b pb-5">
+                        <select name="level" id="level" class="w-full border border-border-line p-4">
+                            <option value="-Choose access level-" class="text-secondary">
+                                -Choose access level-
+                            </option>
+                            <option value="-Choose access level-" class="text-secondary">
+                                Admin
+                            </option>
+                        </select>
+                    </div>
+                    <h3 class="pb-5 pt-5 text-20p font-bold">Custom Access</h3>
+                    <ul>
+                        <li class="pb-4">
+                            <input type="checkbox" name="Lecture" id="Lecture" class="h-4 w-4" />
+                            <label for="Lecture" class="pl-2">Lecture</label>
+                        </li>
+                        <li class="pb-4">
+                            <input type="checkbox" name="Coupon" id="Coupon" class="h-4 w-4" />
+                            <label for="Coupon" class="pl-2">Coupon</label>
+                        </li>
+                        <li class="pb-4">
+                            <input type="checkbox" name="Message" id="Message" class="h-4 w-4" />
+                            <label for="Message" class="pl-2">Message</label>
+                        </li>
+                        <li class="pb-4">
+                            <input type="checkbox" name="Setting" id="Setting" class="h-4 w-4" />
+                            <label for="Setting" class="pl-2">Setting</label>
+                        </li>
+                        <li class="pb-4">
+                            <input type="checkbox" name="Task Menu" id="Task Menu" class="h-4 w-4" />
+                            <label for="Task Menu" class="pl-2">Task Menu</label>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="bg-gray-200 px-4 py-3 text-right">
-                <button type="button" onclick="toggleModalView()"
-                    class="py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-700 mr-2"><i class="fas fa-times"></i>
-                    Cancel</button>
-                <button type="button"
-                    class="py-2 px-4 bg-blue-500 text-white rounded font-medium hover:bg-blue-700 mr-2 transition duration-500"><i
-                        class="fas fa-plus"></i> Create</button>
+                <div class="sticky bottom-0 bg-white">
+                    <div class="flex justify-end border-t border-border-line py-4 pr-8">
+                        <button onclick="toggleModalNew()" type="button"
+                            class="py-1 px-8  bg-white border  border-primary  font-bold text-primary mr-4 h-[35px] w-[112px]">
+                            Cancel
+                        </button>
+                        <button type="button"
+                            class=" py-1 px-8  bg-primary border mb-4  font-bold text-white  h-[35px] w-[92px]">Add</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    function toggleModalView() {
-        document.getElementById('modal_view').classList.toggle('hidden');
+    function toggleModalNew() {
+        document.getElementById('modal_new').classList.toggle('hidden');
     }
 </script>
