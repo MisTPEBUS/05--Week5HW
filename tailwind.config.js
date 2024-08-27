@@ -47,8 +47,10 @@ module.exports = {
         primary: "#198754",
         secondary: "#6C757D",
         text: "#212529",
-        "border": "#CED4DA",
-        "light-bg": "#F8F9FA",
+
+      },
+      textDecoration: {
+        revert: 'revert',
       },
     },
   },

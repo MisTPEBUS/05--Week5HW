@@ -1,32 +1,38 @@
-<aside class="flex bg-light-bg w-[18.5rem]  h-screen flex-col">
+<aside class="flex bg-gray-100 w-[296px]  h-screen flex-col text-16p overflow-hidden">
     <div class="p-8">
-        <a href="#"><img src="../assets/images/logo-ANSWER.svg" alt=""></a>
+        <a href="#"><img src="../assets/images/logo-ANSWER.svg" class="object-cover" alt=""></a>
     </div>
-    <ul>
-        <li class="nav-item">
-            <a href="#" class="flex items-center"><i class="material-icons w-6 h-6 mr-4">analytics</i>Dashboard</a>
+    <ul id="menu">
+        <li class="nav-item cursor-default" id="Dashboard" data-nav-page="Dashboard">
+            <a href="#" class="flex items-end cursor-default"><i
+                    class="material-icons w-6 h-6 mr-4">analytics</i>Dashboard</a>
         </li>
-        <li class="nav-item">
-            <a class="flex items-center" href="#"><i class="material-icons w-6 h-6 mr-4">forum</i>Question</a>
+        <li class="nav-item cursor-default" id="Question" data-nav-page="Question">
+            <a class="flex items-end cursor-default" href="#"><i
+                    class="material-icons w-6 h-6 mr-4">forum</i>Question</a>
         </li>
-        <li class="nav-item">
-            <a class="flex items-center" href="#"><i class="material-icons w-6 h-6 mr-4">assignment</i>Assignment</a>
+        <li class="nav-item duration-200 hover:bg-gray-400" id="Assignment" data-nav-page="Assignment">
+            <a class="flex items-end" href="#"><i class="material-icons w-6 h-6 mr-4">assignment</i>Assignment</a>
         </li>
-        <li class="nav-item">
-            <a class="flex items-center" href="#"><i class="material-icons w-6 h-6 mr-4">video_library</i>Course</a>
+        <li class="nav-item cursor-default" id="Course" data-nav-page="Course">
+            <a class="flex items-end cursor-default" href="#"><i
+                    class="material-icons w-6 h-6 mr-4">video_library</i>Course</a>
         </li>
-        <li class="nav-item">
-            <a class="flex items-center" href="#"><i class="material-icons w-6 h-6 mr-4">group</i>Admin</a>
+        <li class="nav-item duration-200 hover:bg-gray-400" id="Admin" data-nav-page="Admin">
+            <a class="flex items-end" href="#"><i class="material-icons w-6 h-6 mr-4">group</i>Admin</a>
         </li>
-        <li class="nav-item">
-            <a class="flex items-center" href="#"><i class="material-icons w-6 h-6 mr-4">settings</i>Settings</a>
+        <li class="nav-item" id="Settings cursor-default" data-nav-page="Settings">
+            <a class="flex items-end cursor-default" href="#"><i
+                    class="material-icons w-6 h-6 mr-4">settings</i>Settings</a>
         </li>
     </ul>
     <div class="mt-auto flex m-8 items-center">
         <img class="mr-4 rounded-full h-10 w-10" src="../assets/images/andychen.jpeg" alt="">
         <div class="">
             <h3 class="font-lato font-bold text-base text-gray-900">Andy Chen</h3>
-            <h4 class="text-gray-600 text-14p">andy0401@mail.com</h4>
+            <a href="#" class="hover:underline">
+                <h4 class="text-gray-600 text-14p">andy0401@mail.com</h4>
+            </a>
         </div>
     </div>
 </aside>

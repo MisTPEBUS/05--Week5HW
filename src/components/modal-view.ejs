@@ -1,0 +1,45 @@
+<div class="fixed z-10 overflow-y-auto top-0 w-full left-0 hidden" id="modal_view">
+    <div class="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div class="fixed inset-0 transition-opacity">
+            <div class="absolute inset-0 bg-gray-900 opacity-50"></div>
+        </div>
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
+        <div class="inline-block align-center bg-white rounded-lg text-left  overflow-hidden shadow-xl transform transition-all "
+            role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+            <div href="#"
+                class="p-8  flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <img class="object-cover w-[140px] rounded-t-lg h-[140px] " src="../assets/images/emir.jpeg" alt="">
+                <div class="flex w-[216px] flex-col justify-between p-4  leading-normal">
+                    <div class="flex justify-between items-center">
+                        <p class="text-16p font-normal">#1</p>
+                        <a href="#" onclick="toggleModalView()"><i class="material-icons w-6 h-6">close</i></a>
+                    </div>
+                    <p class="text-16p font-lato text-gray-900">Admin</p>
+                    <p class="text-24p font-lato text-gray-900 font-bold">Emir Wicks</p>
+                    <p class="text-16p font-lato text-gray-600 ">emir.wicks@mail.com</p>
+                    <select name="verified" id="verified" class="pr-2 ">
+                        <option class="">verified</option>
+                    </select>
+
+
+                </div>
+            </div>
+
+
+        </div>
+        <footer>
+            <button class=" py-1 px-8  bg-white border mb-4 border-primary  font-bold text-primary ">Mark as
+                read</button>
+            <button id="toggleButton" class=" py-1 px-8  bg-primary border mb-4  font-bold text-white ">Reply</button>
+        </footer>
+    </div>
+</div>
+
+
+
+
+<script>
+    function toggleModalView() {
+        document.getElementById('modal_view').classList.toggle('hidden');
+    }
+</script>

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADMIN</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900&family=Noto+Sans+TC:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+</head>
+
+<body class="text-gray-900 leading-normal line-hin flex text-16p box-border ">
+
+    <!-- aside -->
+    <%- include('./src/components/aside.ejs') %>
+        <!-- Main content with modal view -->
+        <div class="h-screen overflow-y-auto">
+            <section class="w-[984px]">
+                <header class="flex justify-between p-8 items-center font-lato">
+                    <div class="flex">
+                        <h2 class="text-24p font-bold mr-6">Admin</h2>
+                        <button id="openModal_new"
+                            class="flex items-center bg-none text-gray-900 font-bold py-2 px-4 rounded hover:text-primary">
+                            <i class="material-icons  w-6 h-6 mr-2 text-primary">add </i>
+                            Add New Admin
+                        </button>
+                    </div>
+                    <div class="flex">
+                        <a href="#" class="mr-6 flex items-center"><i class="material-icons w-6 h-6 ">search</i></a>
+                        <a href="#" class=" flex items-center"><i
+                                class="material-icons w-6 h-6 ">notifications_active</i></a>
+                    </div>
+                </header>
+                <div class="content px-8">
+                    <!-- Other content here -->
+                    <table class="mt-4  min-w-full text-left font-lato text-16p text-gray-900">
+                        <thead>
+                            <tr class=" border-b border-gray-900 font-bold">
+                                <th class="flex justify-start items-center w-[77px]">
+                                    ID<span class=""><i class="material-icons ml-2 text-primary">south</i></span>
+                                </th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Verified</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="cursor-pointer border-b border-gray-400 duration-300 hover:bg-gray-200">
+                                <td class="py-4">#1</td>
+                                <td>Emir Wicks</td>
+                                <td>emir.wicks@mail.com</td>
+                                <td>Yes</td>
+                                <td class="text-end pr-2">
+                                    <button id="openModal_view" class="mr-6 duration-300 hover:text-primary"><i
+                                            class="material-icons w-4 h-4">visibility</i></button>
+                                    <button id="openModal_eddit" class="duration-300 hover:text-primary"><i
+                                            class="material-icons w-4 h-4">edit</i></button>
+                                </td>
+                            </tr>
+                            <tr class="cursor-pointer border-b border-gray-400 duration-300 hover:bg-gray-200">
+                                <td class="py-4">#2</td>
+                                <td>Zaina Goldsmith</td>
+                                <td>zaina.goldsmith@mail.com</td>
+                                <td>Yes</td>
+                                <td class="text-end pr-2">
+                                    <button class="mr-6"><i class="material-icons w-4 h-4">visibility</i></button>
+                                    <button><i class="material-icons w-4 h-4">edit</i></button>
+                                </td>
+                            </tr>
+                            <tr class="cursor-pointer border-b border-gray-400 duration-300 hover:bg-gray-200">
+                                <td class="py-4">#3</td>
+                                <td>Mahima Lopez</td>
+                                <td>mahima.lopez@mail.com</td>
+                                <td>Yes</td>
+                                <td class="text-end pr-2">
+                                    <button class="mr-6"><i class="material-icons w-4 h-4">visibility</i></button>
+                                    <button><i class="material-icons w-4 h-4">edit</i></button>
+                                </td>
+                            </tr>
+                            <tr class="cursor-pointer border-b border-gray-400 duration-300 hover:bg-gray-200">
+                                <td class="py-4">#4</td>
+                                <td>Pharrell Murray</td>
+                                <td>pharrell.murray@mail.com</td>
+                                <td>Yes</td>
+                                <td class="text-end pr-2">
+                                    <button class="mr-6"><i class="material-icons w-4 h-4">visibility</i></button>
+                                    <button><i class="material-icons w-4 h-4">edit</i></button>
+                                </td>
+                            </tr>
+                            <tr class="cursor-pointer border-b border-gray-400 duration-300 hover:bg-gray-200">
+                                <td class="py-4">#5</td>
+                                <td>Annika Mcbride</td>
+                                <td>annika.mcbride@mail.com</td>
+                                <td>Yes</td>
+                                <td class="text-end pr-2">
+                                    <button class="mr-6"><i class="material-icons w-4 h-4">visibility</i></button>
+                                    <button><i class="material-icons w-4 h-4">edit</i></button>
+                                </td>
+                            </tr>
+                            <tr class="cursor-pointer border-b border-gray-400 duration-300 hover:bg-gray-200">
+                                <td class="py-4">#6</td>
+                                <td>Fatimah Clark</td>
+                                <td>fatimah.clark@mail.com</td>
+                                <td>Yes</td>
+                                <td class="text-end pr-2">
+                                    <button class="mr-6"><i class="material-icons w-4 h-4">visibility</i></button>
+                                    <button><i class="material-icons w-4 h-4">edit</i></button>
+                                </td>
+                            </tr>
+                            <tr class="cursor-pointer border-b border-gray-400 duration-300 hover:bg-gray-200">
+                                <td class="py-4">#7</td>
+                                <td>Klaudia Rhodes</td>
+                                <td>klaudia.rhodes@mail.com</td>
+                                <td>Yes</td>
+                                <td class="text-end pr-2">
+                                    <button class="mr-6"><i class="material-icons w-4 h-4">visibility</i></button>
+                                    <button><i class="material-icons w-4 h-4">edit</i></button>
+                                </td>
+                            </tr>
+                            <tr class="cursor-pointer border-b border-gray-400 duration-300 hover:bg-gray-200">
+                                <td class="py-4">#8</td>
+                                <td>Tillie Lucero</td>
+                                <td>tillie.lucero@mail.com</td>
+                                <td>Yes</td>
+                                <td class="text-end pr-2">
+                                    <button class="mr-6"><i class="material-icons w-4 h-4">visibility</i></button>
+                                    <button><i class="material-icons w-4 h-4">edit</i></button>
+                                </td>
+                            </tr>
+                            <tr class="cursor-pointer border-b border-gray-400 duration-300 hover:bg-gray-200">
+                                <td class="py-4">#9</td>
+                                <td>Sabrina Stephenson</td>
+                                <td>sabrina.stephenson@mail.com</td>
+                                <td>Yes</td>
+                                <td class="text-end pr-2">
+                                    <button class="mr-6"><i class="material-icons w-4 h-4">visibility</i></button>
+                                    <button><i class="material-icons w-4 h-4">edit</i></button>
+                                </td>
+                            </tr>
+                            <tr class="cursor-pointer border-b border-gray-400 duration-300 hover:bg-gray-200">
+                                <td class="py-4">#10</td>
+                                <td>Annie Smith</td>
+                                <td>annie.smith@mail.com</td>
+                                <td>Yes</td>
+                                <td class="text-end pr-2">
+                                    <button class="mr-6"><i class="material-icons w-4 h-4">visibility</i></button>
+                                    <button><i class="material-icons w-4 h-4">edit</i></button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <footer class="mt-16 flex justify-end px-8">
+                    <%- include('./src/components/pagination.ejs') %>
+                </footer>
+                <!-- Include modal view -->
+
+            </section>
+            <%- include('../') %>
+
+        </div>
+
+
+        <!--    <script type="module" src="../js/admin.js"></script> -->
+        <script type="module" src="/src/main.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('Admin').classList.add('nav-active');
+            });
+        </script>
+</body>
+
+</html>
