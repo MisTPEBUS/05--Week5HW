@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + JS + tailwindcss v3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <script type="module" crossorigin src="/05--Week5HW/assets/main-CLmikspb.js"></script>
+  <link rel="stylesheet" crossorigin href="/05--Week5HW/assets/main-CxVI2diI.css">
+</head>
+
+<body class="text-gray-900 leading-normal line-hin flex text-16p">
+
+    <!-- aside -->
+    <aside class="flex bg-gray-100 w-[296px]  h-screen flex-col text-16p overflow-hidden">
+    <div class="p-8">
+        <a href="#"><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='151'%20height='40'%20viewBox='0%200%20151%2040'%3e%3cdefs%3e%3cstyle%3e.a{fill:none;}.b,.f{fill:%232a8356;}.b{stroke:%23707070;}.c{clip-path:url(%23a);}.d{fill:%23121212;}.e{clip-path:url(%23b);}%3c/style%3e%3cclipPath%20id='a'%3e%3crect%20class='a'%20width='103'%20height='24'%20transform='translate(72%2035)'/%3e%3c/clipPath%3e%3cclipPath%20id='b'%3e%3crect%20class='b'%20width='40'%20height='40'/%3e%3c/clipPath%3e%3c/defs%3e%3cg%20transform='translate(-208%20-260)'%3e%3cg%20class='c'%20transform='translate(184%20233)'%3e%3cpath%20class='d'%20d='M9.6-3.72H4.584L3.432,0H.144L5.568-16.8H8.856L14.256,0H10.8ZM5.352-6.36h3.6l-1.7-5.616H7.032ZM21.24-9.936h-.12l.144,1.992V0h-3.12V-16.8h2.88L26.832-6.528h.12l-.216-2.016V-16.8h3.12V0h-2.88ZM35.16-5.5H37.8V-3.12l.144.048a7.177,7.177,0,0,0,1.212.4,6.089,6.089,0,0,0,1.4.156,3.5,3.5,0,0,0,2.088-.54,1.7,1.7,0,0,0,.744-1.452,1.628,1.628,0,0,0-.612-1.32,6.18,6.18,0,0,0-1.512-.888q-.9-.384-1.968-.768a9.393,9.393,0,0,1-1.968-.972A5.42,5.42,0,0,1,35.82-9.936a3.979,3.979,0,0,1-.612-2.3,4.624,4.624,0,0,1,.42-1.98A4.552,4.552,0,0,1,36.8-15.768a5.453,5.453,0,0,1,1.812-1.008,7.257,7.257,0,0,1,2.352-.36,15.68,15.68,0,0,1,2.88.264,7.793,7.793,0,0,1,2.256.72v4.872h-2.64v-2.664a.453.453,0,0,1-.144-.024,8.975,8.975,0,0,0-1.14-.228,8.9,8.9,0,0,0-1.212-.084,3.146,3.146,0,0,0-1.812.456A1.417,1.417,0,0,0,38.5-12.6a1.6,1.6,0,0,0,.612,1.3,6.758,6.758,0,0,0,1.512.912q.9.408,1.968.816a10.314,10.314,0,0,1,1.968,1A5.42,5.42,0,0,1,46.068-7.1a3.844,3.844,0,0,1,.612,2.232A5.063,5.063,0,0,1,46.2-2.6,4.579,4.579,0,0,1,44.856-.972a5.9,5.9,0,0,1-2.04.984,9.549,9.549,0,0,1-2.544.324A9.329,9.329,0,0,1,38.58.192a11.132,11.132,0,0,1-1.44-.36,9.841,9.841,0,0,1-1.164-.456q-.5-.24-.816-.408ZM54.6-7.416,54.648-5.4h.1l.408-1.9,1.44-4.464H59.04L60.384-7.3l.432,1.9h.1l.048-2.064.672-9.336h3.024L62.928,0H60.144l-1.8-5.3-.552-2.3h-.12L57.1-5.3,55.152,0h-2.88L50.544-16.8h3.288ZM68.88-16.8H79.9v2.928H72.168V-9.96H79.3v2.928H72.168v4.1h7.848V0H68.88Zm16.608.168q.552-.1,1.188-.18t1.272-.132q.636-.048,1.236-.072t1.1-.024a11.78,11.78,0,0,1,2.316.228,6.186,6.186,0,0,1,2.04.78,4.143,4.143,0,0,1,1.44,1.488,4.6,4.6,0,0,1,.54,2.328,6.917,6.917,0,0,1-.2,1.788A4.913,4.913,0,0,1,95.856-9.1a4.023,4.023,0,0,1-.876,1,7.8,7.8,0,0,1-1.116.756L97.92,0H94.128L90.744-6.576H88.776V0H85.488Zm5.04,2.52q-.5,0-1,.024a3.734,3.734,0,0,0-.756.1V-9.12h1.3A3.721,3.721,0,0,0,92.3-9.744a2.373,2.373,0,0,0,.864-2.064A2.173,2.173,0,0,0,92.5-13.5,2.83,2.83,0,0,0,90.528-14.112Z'%20transform='translate(74%2055)'/%3e%3c/g%3e%3cg%20class='e'%20transform='translate(208%20260)'%3e%3cpath%20class='f'%20d='M-3017.5-951l-5.785-5.784-6.589.66.658-6.592L-3035-968.5l5.783-5.784-.658-6.59,6.589.659L-3017.5-986l5.783,5.784,6.59-.659-.659,6.589L-3000-968.5l-5.784,5.784.659,6.59-6.59-.66L-3017.5-951h0Zm0-30-12.5,12.5,12.5,12.5,12.5-12.5Zm-3.1,15.6-6.9-3.1,6.9-3.1,3.1-6.9,3.1,6.9,6.9,3.1-6.9,3.1-3.1,6.9Z'%20transform='translate(3037.5%20988.501)'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e" class="object-cover" alt=""></a>
+    </div>
+    <ul id="menu">
+        <li class="nav-item cursor-default" id="Dashboard" data-nav-page="Dashboard">
+            <a href="#" class="flex items-end cursor-default"><i
+                    class="material-icons w-6 h-6 mr-4">analytics</i>Dashboard</a>
+        </li>
+        <li class="nav-item cursor-default" id="Question" data-nav-page="Question">
+            <a class="flex items-end cursor-default" href="#"><i
+                    class="material-icons w-6 h-6 mr-4">forum</i>Question</a>
+        </li>
+        <li class="nav-item duration-200 hover:bg-gray-400" id="Assignment" data-nav-page="Assignment">
+            <a class="flex items-end" href="#"><i class="material-icons w-6 h-6 mr-4">assignment</i>Assignment</a>
+        </li>
+        <li class="nav-item cursor-default" id="Course" data-nav-page="Course">
+            <a class="flex items-end cursor-default" href="#"><i
+                    class="material-icons w-6 h-6 mr-4">video_library</i>Course</a>
+        </li>
+        <li class="nav-item duration-200 hover:bg-gray-400" id="Admin" data-nav-page="Admin">
+            <a class="flex items-end" href="#"><i class="material-icons w-6 h-6 mr-4">group</i>Admin</a>
+        </li>
+        <li class="nav-item" id="Settings cursor-default" data-nav-page="Settings">
+            <a class="flex items-end cursor-default" href="#"><i
+                    class="material-icons w-6 h-6 mr-4">settings</i>Settings</a>
+        </li>
+    </ul>
+    <div class="mt-auto flex m-8 items-center">
+        <img class="mr-4 rounded-full h-10 w-10" src="/05--Week5HW/assets/andychen-BCCOB3lI.jpeg" alt="">
+        <div class="">
+            <h3 class="font-lato font-bold text-base text-gray-900">Andy Chen</h3>
+            <a href="#" class="hover:underline">
+                <h4 class="text-gray-600 text-14p">andy0401@mail.com</h4>
+            </a>
+        </div>
+    </div>
+</aside>
+
+        <!-- page assign Main -->
+
+        <div class="h-screen overflow-y-auto w-[984px]">
+            <section class="">
+
+                <header class="flex justify-between p-8 items-center font-lato">
+                    <div class="flex">
+                        <h2 class="text-24p font-bold mr-6">Assignment</h2>
+                        <select name="select" id="select" class="pr-2 font-bold">
+                            <option class="">All Courses</option>
+                        </select>
+
+                    </div>
+                    <div class="flex">
+                        <a href="#" class="mr-7 flex items-center"><i class="material-icons w-6 h-6 ">search</i></a>
+                        <a href="#" class="mr-7 flex items-center"><i
+                                class="material-icons w-6 h-6 ">notifications_active</i></a>
+                    </div>
+                </header>
+
+                <div class="content">
+                    <div class=" flex p-8 pt-4 pb-1">
+                        <select id="all" aria-label="all" class="custom-select mr-auto pr-2 font-bold text-text">
+                            <option>All (4)</option>
+                        </select>
+                        <div>
+                            <span class="text-xs text-secondary">2 comments</span>
+                        </div>
+                    </div>
+
+
+                    <div class="px-8 flex ">
+                        <!-- left -->
+                        <div class="w-[320px] mr-4  ">
+                            <ol>
+                                <li class="bg-gray-100 p-3 border border-gray-400 ">
+                                    <div class="flex justify-between pb-1 text-gray-900 leading-tight font-normal">
+                                        <p class=" text-12p l">Chapter Assignment 2</p>
+                                        <p class=" text-12p">4 hrs ago</p>
+                                    </div>
+                                    <div class="flex justify-between text-gray-900 leading-tight">
+                                        <p class=" text-16p font-bold">Please check this file…</p>
+                                        <p class="text-gray-600 text-12p">Emily Wang</p>
+                                    </div>
+                                </li>
+                                <li class="bg-white p-3 border border-gray-400 ">
+                                    <div class="flex justify-between pb-1 text-gray-900 leading-tight font-normal">
+                                        <p class=" text-12p l">Chapter Assignment 1</p>
+                                        <p class=" text-12p">12 hrs ago</p>
+                                    </div>
+                                    <div class="flex justify-between text-gray-900 leading-tight">
+                                        <p class=" text-16p font-bold">My Homework</p>
+                                        <p class="text-gray-600 text-12p">David Xu</p>
+                                    </div>
+                                </li>
+                                <li class="bg-white p-3 border border-gray-400 ">
+                                    <div class="flex justify-between pb-1 text-gray-900 leading-tight font-normal">
+                                        <p class=" text-12p l">Final Assignment</p>
+                                        <p class=" text-12p">18 hrs ago</p>
+                                    </div>
+                                    <div class="flex justify-between text-gray-900 leading-tight">
+                                        <p class=" text-16p font-bold">Have a problem with this…</p>
+                                        <p class="text-gray-600 text-12p">Tony Wei</p>
+                                    </div>
+                                </li>
+                                <li class="bg-white p-3 border border-gray-400 ">
+                                    <div class="flex justify-between pb-1 text-gray-900 leading-tight font-normal">
+                                        <p class=" text-12p l">Final Assignment</p>
+                                        <p class=" text-12p">19 hrs ago</p>
+                                    </div>
+                                    <div class="flex justify-between text-gray-900 leading-tight">
+                                        <p class=" text-16p font-bold">Did I do it right?</p>
+                                        <p class="text-gray-600 text-12p">Christina Lin</p>
+                                    </div>
+                                </li>
+
+
+                            </ol>
+                        </div>
+                        <!-- right -->
+                        <div class="w-[584px]  bg-white border border-gray-400">
+                            <!--header-->
+                            <div class="flex justify-between bg-gray-100 border-b border-gray-400 py-3 px-4 ">
+                                <div>
+                                    <p class="text-gray-900 font-normal text-12p">Chapter Assignment 2 / HTML&CSS</p>
+                                    <p class="font-bold">Please check this file for me, thanks!</p>
+                                </div>
+                                <a href="#" class="self-center"><i class="material-icons w-6 h-6">more_vert</i></a>
+
+                            </div>
+                            <!--content-->
+                            <ol>
+                                <li>
+                                    <div class="ml-4 mr-8 flex">
+                                        <!--icon-->
+                                        <div class="p-2">
+                                            <img class="max-w-none object-cover mr-2 rounded-full h-10 w-10"
+                                                src="/05--Week5HW/assets/emilywang-C9l0kE4S.jpeg" alt="">
+                                        </div>
+                                        <!--sub_item-->
+                                        <div class="border-b border-gray-400">
+                                            <!-- header -->
+                                            <div class="flex mt-4 content-between">
+                                                <div class="flex">
+
+                                                    <div>
+                                                        <p class="text-gray-900 font-bold">Emily Wang</p>
+                                                        <p class="text-gray-600 font-normal text-12p">10:38 AM (4 hours
+                                                            ago)</p>
+                                                    </div>
+                                                </div>
+                                                <!--sub-->
+                                                <div class="flex items-center">
+                                                </div>
+                                            </div>
+
+                                            <!--content-->
+                                            <div class="py-3  pr-8 text-14p">
+                                                <p>Hi Teacher, the attached file is my homework of chapter 2. And here
+                                                    comes a question: Why in
+                                                    the following code the
+                                                    height of the <span class="text-primary hover:underline"><a
+                                                            href="#">div</a></span> is
+                                                    bigger than the height
+                                                    of
+                                                    the <span class="text-primary hover:underline"><a
+                                                            href="#">img</a></span> ? There is a gap
+                                                    below the image,
+                                                    but
+                                                    it doesn’t seems to be a
+                                                    padding/margin. What is the gap or extra space below image?</p>
+                                            </div>
+
+                                            <!--footer-->
+                                            <div class="">
+                                                <button
+                                                    class=" py-2 px-3  bg-gray-100 border mb-4  font-bold text-gray-900"><i
+                                                        class="material-icons w-6 h-6">attach_file</i>HW-2-David.zip</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="hasReply" class="hidden">
+                                    <div class="relative">
+                                        <div id="editor-container" class="h-80 w-full "></div>
+                                        <div class="w-1/2 text-end absolute right-4 bottom-4">
+                                            <button id="cancel"
+                                                class=" py-1 px-8  bg-white border mb-4 border-primary  font-bold text-primary ">Cancel</button>
+                                            <button
+                                                class=" py-1 px-8  bg-primary border mb-4  font-bold text-white ">Reply</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="border border-gray-400 bg-white mt-1.5">
+                                        <!--header-->
+
+                                        <!--content-->
+                                        <!--footer-->
+
+                                    </div>
+                                </li>
+                                <li id="isReply">
+                                    <div class="ml-4 mr-8 flex">
+                                        <!--icon-->
+                                        <div class="p-2">
+                                            <img class="max-w-none object-cover mr-2 rounded-full h-10 w-10"
+                                                src="/05--Week5HW/assets/andychen-BCCOB3lI.jpeg" alt="">
+                                        </div>
+                                        <!--sub_item-->
+                                        <div class="border-b border-gray-400">
+                                            <!-- header -->
+                                            <div class="flex mt-4 content-between">
+                                                <div class="flex">
+
+                                                    <div>
+                                                        <p class="text-gray-900 font-bold">Andy Chen (You)</p>
+                                                        <p class="text-gray-600 font-normal text-12p">13:24 AM (1 hours
+                                                            ago)</p>
+                                                    </div>
+                                                </div>
+                                                <!--sub-->
+                                                <div class="flex items-center">
+
+                                                </div>
+                                            </div>
+
+                                            <!--content-->
+                                            <div class="py-3  pr-8 text-14p">
+                                                <p>Hi David, by default, an image is rendered inline, like a letter so
+                                                    it sits on the same line
+                                                    that a, b, c and d sit on.
+                                                    There is space below that line for the descenders you find on
+                                                    letters like g, j, p and q.
+                                                </p>
+                                                <br>
+                                                <p>
+                                                    You can:
+                                                </p>
+                                                <br>
+                                                <ul>
+                                                    <li>
+                                                        <p>adjust the <span class="text-primary hover:underline"><a
+                                                                    href="#">vertical-align</a></span> of the image
+                                                            to position it
+                                                            elsewhere (e.g. the
+                                                            <span class="text-primary hover:underline"><a
+                                                                    href="#">middle</a></span> ) or
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p>change the <span class="text-primary hover:underline"><a
+                                                                    href="#">display</a></span> so
+                                                            it isn’t inline.
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!--footer-->
+                                            <div class="">
+                                                <button
+                                                    class=" py-2 px-3  bg-gray-100 border mb-4  font-bold text-gray-900"><i
+                                                        class="material-icons w-6 h-6">attach_file</i>HW-2-David.zip</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ol>
+
+                        </div>
+                    </div>
+
+                </div>
+                <footer class="mt-4 " id="assignFooter">
+                    <!-- toggleButton -->
+                    <div class="w-[586px] flex ml-auto content-between mr-8">
+                        <div class="w-1/2 flex items-center">
+                            <a href="#"><i class="material-icons w-6 h-6 mr-6">chevron_left</i></a>
+                            <a href="#"><i class="material-icons w-6 h-6">chevron_right</i></a>
+                        </div>
+                        <div class="w-1/2 text-end">
+                            <button
+                                class=" py-1 px-8  bg-white border mb-4 border-primary  font-bold text-primary ">Mark as
+                                read</button>
+                            <button id="toggleButton"
+                                class=" py-1 px-8  bg-primary border mb-4  font-bold text-white ">Reply</button>
+                        </div>
+                    </div>
+                </footer>
+            </section>
+        </div>
+        <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('Assignment').classList.add('nav-active');
+            });
+        </script>
+</body>
+
+</html>
